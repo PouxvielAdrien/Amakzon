@@ -29,8 +29,11 @@
         <div class="card-body text-center mx-auto">
             <div class='cvp'>
                 <?php echo '<td><h3 class="card-title font-weight-bold">'.htmlspecialchars($_GET["name"]) .'</h3></td>'?>
-                <?php echo '<td><h5 class="card-title font-weight-bold">$'.htmlspecialchars($_GET["price"]) .'</h5></td>'?>
-
+                <?php if ((isset($_GET["promo"]))): ?>
+                    <h5 class="card-title font-weight-bold">$<?php echo $_GET['price'] - $_GET['price'] * $_GET['promo']/100; ?></h5>
+                <?php else: ?>
+                    <h5 class="card-title font-weight-bold">$<?php echo $_GET['price']; ?></h5>
+                <?php endif; ?>
                 <?php echo '<td><p class="card-title font-weight-bold">Category '.htmlspecialchars($_GET["category"]) .'</p></td>'?>
                 <?php if (htmlspecialchars($_GET["enable"])){
                     echo '<td><a href="#" class="btn btn-outline-dark">Buy Now</a></td>';
@@ -39,13 +42,12 @@
                    echo '<td> <a href="#" class="btn btn-danger">Not Available</a></td>';
                 }
                 ?>
-
             </div>
         </div>
     </div>
-
 </div>
 
 <?php include_once('footer.php'); ?>
+
 </body>
 </html>
