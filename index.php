@@ -8,38 +8,38 @@
               crossorigin="anonymous">
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <link href="css/index.css" rel="stylesheet">
     </head>
     <body class="bg-light">
 
-    <?php include_once('PHP/header.php'); ?>
-    <!-- inclusion des variables et fonctions -->
+    <?php include_once('php/header.php'); ?>
     <?php
-    include_once 'PHP/variables.php';
-    include_once 'PHP/functions.php';
+    include_once 'php/variables.php';
+    include_once 'php/functions.php';
     ?>
 
     <div class="row lg-3 justify-content-center">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner shadow-sm rounded">
                 <div class="carousel-item ">
-                    <?php echo '<td><a href="PHP/product.php?'.http_build_query($weapons[0]).'"> 
+                    <?php echo '<td><a href="php/product.php?'.http_build_query($weapons[0]).'"> 
                     <img class="d-block w-100" src="images/'.$weapons[0]['image_carousel'].'" alt="'.$weapons[0]['name'].'"/></a></td>' ?>
                 </div>
                 <div class="carousel-item">
                     <?php
-                    echo '<td><a href="PHP/product.php?'.http_build_query($weapons[1]).'"> 
+                    echo '<td><a href="php/product.php?'.http_build_query($weapons[1]).'"> 
                                 <img class="d-block w-100" src="images/'.$weapons[1]['image_carousel'].'" alt="'.$weapons[1]['name'].'"/>
                             </a></td>' ?>
                 </div>
                 <div class="carousel-item">
                     <?php
-                    echo '<td><a href="PHP/product.php?'.http_build_query($weapons[5]).'"> 
+                    echo '<td><a href="php/product.php?'.http_build_query($weapons[5]).'"> 
                                 <img class="d-block w-100" src="images/'.$weapons[5]['image_carousel'].'" alt="'.$weapons[5]['name'].'"/>
                             </a></td>' ?>
                 </div>
                 <div class="carousel-item active">
                     <?php
-                    echo '<td><a href="PHP/product.php?'.http_build_query($weapons[3]).'"> 
+                    echo '<td><a href="php/product.php?'.http_build_query($weapons[3]).'"> 
                                 <img class="d-block w-100" src="images/'.$weapons[3]['image_carousel'].'" alt="'.$weapons[3]['name'].'"/>
                             </a></td>' ?>
                     <div class="carousel-caption text-center">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="carousel-item">
                     <?php
-                    echo '<td><a href="PHP/product.php?'.http_build_query($weapons[2]).'"> 
+                    echo '<td><a href="php/product.php?'.http_build_query($weapons[2]).'"> 
                                 <img class="d-block w-100" src="images/'.$weapons[2]['image_carousel'].'" alt="'.$weapons[2]['name'].'"/>
                             </a></td>' ?>
                 </div>
@@ -73,7 +73,11 @@
                     <?php if (array_key_exists('enable', $weapon) && $weapon['enable']): ?>
                         <div class="col col-lg-3 col-md-4 p-2">
                             <div class="card shadow-sm rounded">
-                                <?php echo '<td><a href="PHP/product.php?'.http_build_query($weapon).'">
+                                <?php if ($weapon['new']): ?>
+                                    <div class="ribbon ribbon-top-left"><span>New</span></div>
+                                <?php endif; ?>
+
+                                <?php echo '<td><a href="php/product.php?'.http_build_query($weapon).'">
                                     <img class="img-fluid p-4" src="images/'.$weapon['image'].'" alt="'.$weapon['name'].'"/>
                                     </a></td>'?>
 
@@ -88,6 +92,8 @@
             </div>
         </div>
     </div>
-    <?php include('PHP/footer.php'); ?>
+
+
+    <?php include('php/footer.php'); ?>
     </body>
 </html>
