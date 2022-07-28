@@ -23,25 +23,25 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner shadow-sm rounded-bottom">
                         <div class="carousel-item">
-                            <?php echo '<td><a href="php/product.php?'.http_build_query($weapons[0]).'">
+                            <?php echo '<td><a href="php/product.php?'.http_build_query($weapons[0]['id']).'">
                             <img class="d-block w-100" src="images/'.$weapons[0]['image_carousel'].'" alt="'.$weapons[0]['name'].'"/></a></td>' ?>
                         </div>
                         <div class="carousel-item">
                             <?php
-                            echo '<td><a href="php/product.php?'.http_build_query($weapons[1]).'">
+                            echo '<td><a href="php/product.php?'.http_build_query($weapons[1]['id']).'">
                                         <img class="d-block w-100" src="images/'.$weapons[1]['image_carousel'].'" alt="'.$weapons[1]['name'].'"/>
                                     </a></td>' ?>
                         </div>
                         <div class="carousel-item">
                             <?php
-                            echo '<td><a href="php/product.php?'.http_build_query($weapons[5]).'">
+                            echo '<td><a href="php/product.php?'.http_build_query($weapons[5]['id']).'">
                                         <img class="d-block w-100" src="images/'.$weapons[5]['image_carousel'].'" alt="'.$weapons[5]['name'].'"/>
                                     </a></td>' ?>
                         </div>
                         <div class="carousel-item active">
                             <?php
-                            echo '<td><a href="php/product.php?'.http_build_query($weapons[3]).'">
-                                        <img class="img-fluid" src="images/'.$weapons[3]['image_carousel'].'" alt="'.$weapons[3]['name'].'"/>
+                            echo '<td><a href="php/product.php?'.http_build_query($weapons[3]['id']).'">
+                                        <img class="d-block w-100" src="images/'.$weapons[3]['image_carousel'].'" alt="'.$weapons[3]['name'].'"/>
                                     </a></td>' ?>
                             <div class="carousel-caption text-center">
                                 <h1>Best Weapons You Can Find</h1>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="carousel-item">
                             <?php
-                            echo '<td><a href="php/product.php?'.http_build_query($weapons[2]).'"> 
+                            echo '<td><a href="php/product.php?'.http_build_query($weapons[2]['id']).'"> 
                                         <img class="d-block w-100" src="images/'.$weapons[2]['image_carousel'].'" alt="'.$weapons[2]['name'].'"/>
                                     </a></td>' ?>
                         </div>
@@ -77,7 +77,7 @@
                                             <div class="ribbon ribbon-top-left"><span><?php echo $weapon['promo'] ?>% Off </span></div>
                                         <?php endif; ?>
 
-                                        <?php echo '<td><a href="php/product.php?'.http_build_query($weapon).'">
+                                        <?php echo '<td><a href="php/product.php?'.http_build_query($weapon['id']).'">
                                             <img class="img-fluid p-4" src="images/'.$weapon['image'].'" alt="'.$weapon['name'].'"/>
                                             </a></td>'?>
 
