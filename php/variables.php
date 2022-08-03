@@ -89,7 +89,7 @@ $weapons = [
         'id' => ['id' => 7],
         'image' => 'axe.jpg',
         'category' => 'B',
-        'description' => 'TThis Outdoor Axe is a compact axe ideal to take with you, or for small jobs in the garden. 
+        'description' => 'This Outdoor Axe is a compact axe ideal to take with you, or for small jobs in the garden. 
                           It comes with a small leather sheath that protects the cutting part.',
         'composition' => 'metal and cherry tree wood'],
 ];
