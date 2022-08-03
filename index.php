@@ -87,11 +87,11 @@
                                             <div class="row">
                                                     <?php if (array_key_exists('promo', $weapon) && $weapon['promo']): ?>
                                                     <div class="col">
-                                                        <span class="text-decoration-line-through" ><?php echo $weapon['price']. '$' ; ?></span>
-                                                        <span>  <?php echo $weapon['price']- $weapon['price'] * $weapon['promo']/100  . '$' ; ?></span>
+                                                        <span class="text-decoration-line-through" ><?php echo '$'.$weapon['price']; ?></span>
+                                                        <span><?php echo '$'.$weapon['price']- $weapon['price'] * $weapon['promo']/100; ?></span>
                                                     </div>
                                                     <?php else: ?>
-                                                        <span><?php echo $weapon['price']. '$' ; ?></span>
+                                                        <span><?php echo '$'.$weapon['price']; ?></span>
                                                     <?php endif; ?>
                                             </div>
 

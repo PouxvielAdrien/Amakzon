@@ -27,8 +27,8 @@
 }
 
 .ribbon-top-left {
-    top: -2px;  /*up and down*/
-    left: -3px;
+    top: 0px;  /*up and down*/
+    left: 0px;
 }
 
 .ribbon-top-left span {
