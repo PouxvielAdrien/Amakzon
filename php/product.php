@@ -95,70 +95,64 @@ include_once 'functions.php';
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <h2 class="fw-bolder mb-4">Related products</h2>
-        <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col mb-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col col-lg-3 col-md-4 p-3">
                 <a href="product.php?<?php echo http_build_query($weapons[1]['id'])?>">
-                    <div class="card shadow h-100">
-                        <img class="card-img-top border"
-                         src="../images/<?php echo $weapons[1]["image"]?>"
-                         width="auto" height="auto" alt="<?php echo $weapons[1]['name']?>"/>
+                    <div class="card shadow-sm rounded">
                         <div class="ribbon ribbon-top-left"><span><?php echo $weapons[1]['promo'] ?>% Off </span></div>
-                        <div class="card-body p-4">
+                        <img class="card-img-top border"
+                             src="../images/<?php echo $weapons[1]["image"]?>"
+                             width="auto" height="auto" alt="<?php echo $weapons[1]['name']?>"/>
+                        <div class="card-body text-center rounded">
                             <div class="text-center">
                                 <h5 class="fw-bolder"><?php echo $weapons[1]['name']?></h5>
-                                <span class="text-decoration-line-through" ><?php echo $weapons[1]['price']. '$' ; ?></span>
+                                <span class="text-decoration-line-through" ><?php echo '$'. $weapons[1]['price']; ?></span>
                                 <span><?php echo '$' . ($weapons[1]['price'] - $weapons[1]['price'] * $weapons[1]['promo'] / 100); ?></span>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col mb-5">
+            <div class="col col-lg-3 col-md-4 p-3">
                 <a href="product.php?<?php echo http_build_query($weapons[4]['id'])?>">
-                    <div class="card shadow h-100">
-                        <div class="bg-image hover-zoom">
-                            <img class="card-img-top border"
+                    <div class="card shadow-sm rounded">
+                        <img class="card-img-top border"
                              src="../images/<?php echo $weapons[4]["image"]?>"
                              width="auto" height="auto" alt="<?php echo $weapons[4]['name']?>"/>
-                         </div>
-                        <div class="card-body p-4">
+                        <div class="card-body text-center rounded">
                             <div class="text-center">
                                 <h5 class="fw-bolder"><?php echo $weapons[4]['name']?></h5>
-                                <span><?php echo  '$'. $weapons[4]['price']; ?></span>
+                                <span><?php echo '$' . $weapons[4]['price'] ; ?></span>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col mb-5">
+            <div class="col col-lg-3 col-md-4 p-3">
                 <a href="product.php?<?php echo http_build_query($weapons[5]['id'])?>">
-                    <div class="card shadow h-100">
-                        <div class="bg-image hover-zoom">
-                            <img class="card-img-top border"
-                                 src="../images/<?php echo $weapons[5]["image"]?>"
-                                 width="auto" height="auto" alt="<?php echo $weapons[5]['name']?>"/>
-                        </div>
-                        <div class="card-body p-4">
+                    <div class="card shadow-sm rounded">
+                        <img class="card-img-top border"
+                             src="../images/<?php echo $weapons[5]["image"]?>"
+                             width="auto" height="auto" alt="<?php echo $weapons[5]['name']?>"/>
+                        <div class="card-body text-center rounded">
                             <div class="text-center">
                                 <h5 class="fw-bolder"><?php echo $weapons[5]['name']?></h5>
-                                <span><?php echo  '$'. $weapons[5]['price']; ?></span>
+                                <span><?php echo '$' . $weapons[5]['price']?></span>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col mb-5">
-                <a href="product.php?<?php echo http_build_query($weapons[6]['id'])?>">
-                    <div class="card shadow h-100">
-                        <div class="bg-image hover-zoom">
-                            <img class="card-img-top border"
-                                 src="../images/<?php echo $weapons[6]["image"]?>"
-                                 width="auto" height="auto" alt="<?php echo $weapons[6]['name']?>"/>
-                        </div>
-                        <div class="card-body p-4">
+            <div class="col col-lg-3 col-md-4 p-3">
+                <a href="product.php?<?php echo http_build_query($weapons[1]['id'])?>">
+                    <div class="card shadow-sm rounded">
+                        <img class="card-img-top border"
+                             src="../images/<?php echo $weapons[6]["image"]?>"
+                             width="auto" height="auto" alt="<?php echo $weapons[6]['name']?>"/>
+                        <div class="card-body text-center rounded">
                             <div class="text-center">
-                                <h5 class="fw-bolder"><?php echo $weapons[6]['name']?></h5>
-                                <span><?php echo  '$'. $weapons[6]['price']; ?></span>
+                                <h5><?php echo $weapons[6]['name']?></h5>
+                                <span><?php echo  '$' . $weapons[6]['price']; ?></span>
                             </div>
                         </div>
                     </div>
