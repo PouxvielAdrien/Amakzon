@@ -5,13 +5,6 @@
     position: absolute;
 }
 
-.ribbon::after {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    display: block;
-    border: 5px solid #2980b9;
-}
 .ribbon span {
     position: absolute;
     display: block;
@@ -27,12 +20,39 @@
 }
 
 .ribbon-top-left {
-    top: -2px;  /*up and down*/
-    left: -3px;
+    top: 0px;  /*up and down*/
+    left: 0px;
 }
 
 .ribbon-top-left span {
     right: 0px;
     top: 15px; /*thickness*/
     transform: rotate(-45deg);
+}
+
+
+.card {
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+a:link {
+    text-decoration: none;
+    /* Todo: link color do not work*/
+    color: black;
+}
+
+span{
+    color: black;
+}
+
+h4{
+    color: black;
+}
+
+h5{
+    color: black;
 }
