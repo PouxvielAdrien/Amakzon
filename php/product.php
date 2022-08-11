@@ -8,23 +8,17 @@
           rel="stylesheet"
           crossorigin="anonymous">
     <link href="../css/index.css" rel="stylesheet">
-
 </head>
 <body>
-
-
 <?php include_once('header.php'); ?>
 <?php
 include_once 'variables.php';
-include_once 'functions.php';
 ?>
-
 <?php
 //echo 'Product: ' . htmlspecialchars($_GET["name"])
 //    .'<br>Price: '.htmlspecialchars($_GET["price"]).'$'
 //    .'<br>Category: '.htmlspecialchars($_GET["category"]);
 //?>
-
 <section class="py-5 bg-light">
     <div class="container  container-fluid px-4 px-lg-5 mt-5">
        <div class="row gx-4 gx-lg-5 align-items-center">
@@ -41,7 +35,6 @@ include_once 'functions.php';
                        2-years guarantee
                    </div>
                     <h1 class="display-5 fw-bolder"><?php echo $weapon['name']?></h1>
-
                    <div class="fs-5 mb-4">
                        <?php if (array_key_exists('promo', $weapon)): ?>
                            <!-- TODO : Call a function to do the calcul of the promo price-->
@@ -69,7 +62,6 @@ include_once 'functions.php';
                         </svg>
                        <?php echo 'Composition: ' . $weapon["composition"]?>
                    </p>
-
                    <?php if (array_key_exists('enable', $weapon)&& $weapon['enable']): ?>
                     <button class="btn btn-outline-success mt-1" type="button">
                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart mb-1 me-1" viewBox="0 0 16 16">
@@ -91,7 +83,6 @@ include_once 'functions.php';
        </div>
     </div>
 </section>
-
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <h2 class="fw-bolder mb-4">Related products</h2>
@@ -161,9 +152,6 @@ include_once 'functions.php';
         </div>
     </div>
 </section>
-
-
 <?php include_once('footer.php'); ?>
-
 </body>
 </html>

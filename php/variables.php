@@ -81,7 +81,6 @@ $weapons = [
                           strong and not easy to break, with a carabiner design for easy wearing and replacement.',
         'composition' => 'vibranium',],
 
-
     ['name' => 'Axe',
         'price' => 250,
         'enable' => true,
@@ -93,7 +92,3 @@ $weapons = [
                           It comes with a small leather sheath that protects the cutting part.',
         'composition' => 'metal and cherry tree wood'],
 ];
-
-
-
-

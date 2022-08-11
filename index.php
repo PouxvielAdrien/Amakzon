@@ -11,14 +11,11 @@
         <link href="css/index.css" rel="stylesheet">
     </head>
     <body class="bg-light">
-
         <?php
         include_once 'php/variables.php';
         include_once 'php/functions.php';
         ?>
-
         <?php include_once('php/header.php'); ?>
-
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner shadow-sm rounded-bottom">
                 <div class="carousel-item">
@@ -60,7 +57,6 @@
                 </button>
             </div>
         </div>
-
         <div class="album py-5 bg-light">
             <div class="container text-center">
                 <div class="row mb-2">
@@ -76,7 +72,6 @@
                                             <div class="ribbon ribbon-top-left"><span><?php echo $weapon['promo'] ?>% Off </span></div>
                                         <?php endif; ?>
                                         <img class="img-fluid p-4" src="images/<?php echo $weapon['image']?>" alt="<?php echo $weapon['name']?>"/>
-
                                         <div class="card-body text-center rounded">
                                             <h4 class="card-title"><?php echo $weapon['name']; ?></h4>
                                             <div class="row">
@@ -98,8 +93,6 @@
                 </div>
             </div>
         </div>
-
         <?php include('php/footer.php'); ?>
-
     </body>
 </html>

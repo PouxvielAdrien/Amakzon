@@ -7,9 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
               rel="stylesheet"
               crossorigin="anonymous">
-
     </head>
-
     <?php include_once('header.php');?>
     <body class="bg-light">
         <div class="container">
@@ -36,10 +34,7 @@
             </div>
         </div>
     </body>
-
     <!-- Todo: Delete this -->
     <p class="mb-4"><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-
     <?php include_once('footer.php'); ?>
-
 </html>
